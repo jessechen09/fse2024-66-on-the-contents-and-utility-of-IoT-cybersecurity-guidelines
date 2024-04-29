@@ -1,5 +1,5 @@
-FSE 2024 - Submission #66
-On the Contents and Utility of IoT Cybersecurity Guidelines
+Supplementary Material for
+FSE 2024 - Submission #66 - On the Contents and Utility of IoT Cybersecurity Guidelines
 
 Instructions to view taxonomy visualization:
 1. Open goTree.html inside of the Code folder with a web browser. 
