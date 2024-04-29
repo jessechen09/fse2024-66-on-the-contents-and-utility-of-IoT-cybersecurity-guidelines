@@ -1,0 +1,37 @@
+/*body {
+  background-color: #eee;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node text { font: 16px sans-serif; }
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}*/
+
+button{
+	position: absolute;
+	top: 85%;
+	/*height:100px;*/
+	/*width: 300px;*/
+}
+
+
+#myForm{
+	position: absolute;
+	top: 82%;
+  z-index: -1;
+  width: 99%;
+}
+
+#myDiagramDiv{
+position: fixed;
+width:99%; height:80%; background-color: #DAE4E4;
+}

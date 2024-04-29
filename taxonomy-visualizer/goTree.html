@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>IoT Compliance Tree</title>
+	<!-- use go-debug.js when developing and go.js when deploying -->
+
+	<script src="./jquery-3.6.0.js"></script>
+	<script src="../GoJS/release/go-debug.js"></script>
+	<script src="./goTree.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/xlsx.full.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.13.5/jszip.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!-- The DIV for a Diagram needs an explicit size or else we will not see anything. in this case we also add a background color so we can see that area. -->
+
+<body>
+	<div id="myDiagramDiv"></div>
+	<!-- <button type="button" onclick="toggle(0);">Click me to test a feature!</button>
+ -->
+
+	<form id="myForm">
+		<div>
+			<input type="file" id="inputFile" accept=".xlsx"
+				onmouseup="preprocessing();">
+			<input type="button" id="gentree" value="Generate tree!"
+				onclick="loadData(); expandRoot()">
+		</div>
+		<br>
+		<div>
+			<label for="searchInput">Search: </label>
+			<input id="searchInput" type="text">
+			<input type="button" id="searchButton"
+				value="Search (must click this button)" onclick="search();">
+			<input type="button" id="resetHighlights" value="Reset highlights"
+				onclick="resetSearch();">
+			<input type="button" id="resetHighlights" value="Reset all"
+				onclick="resetAll();" disabled>
+		</div>
+		<br>
+		<p>Check 2+ boxes to highlight differences between selected GLs and target audiences:</p>
+		<input type="checkbox" id="showHide" name="showHide"
+			onclick="showHideBoxUpdated()" disabled>
+		<label for="showHide">Hide unselected nodes</label>
+		<!-- The innerText of the label must be letter for letter equal to the reference used in the Excel document, which consequently is used in the nodeDataArray. See goTree.js. -->
+		<div id="checkBoxes">
+		</div>
+	</form>
+
+</body>
+
+</html>
